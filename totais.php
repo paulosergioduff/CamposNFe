@@ -2,7 +2,7 @@
 
 include "class/totais.class.php";
 
-$dest = new  CamposTotaisNFe;
+$totais = new  CamposTotaisNFe;
 
 echo $totais->totalinicio = "<total>";
                 echo $totais->ICMSTotinicio = "<ICMSTot>";
