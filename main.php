@@ -12,4 +12,6 @@ include "det2.php";
 include "totais.php";
 include "assinatura.php";
 
+echo '</textarea>';
+
 ?>
