@@ -1,23 +1,20 @@
-<?php error_reporting(0);
+<?php 
 
 include "class/woop.class.php";
-include "main.php";
+//include "FormParaXMLexemplo.php";
 
-echo "<hr>";
-
-$app = 'Update';
+$app = $_POST['funcao'];
 
 	$criarpagina = new criarpagina; /* A função de usar classes e objetos ao invés de variáveis estruturais
 	tem mais a ver com didática e organização do código*/
 
-	$criarpagina->pagina = 'nfe-teste.xml';
-	$criarpagina->conteudo = "$cabecalho->xmlversion";
+	$criarpagina->pagina = $_POST['pagina'];
+	$criarpagina->conteudo = $_POST['conteudo'];
 	//$criarpagina->arquivoalvo = ';
-	$criarpagina->$app();
-	echo "<p>Resultado:<br>
-	<textarea rows='4' cols='50'>";
-	include "nfe-teste.xml";
-	echo "</textarea>"
-	
+	$criarpagina->$app();	
 
 ?> 
+<p>Resultado<br>
+<textarea>
+	<?php if (file_exists('nfe-teste.xml')) { include 'nfe-teste.xml';}; ?>
+</textarea>
