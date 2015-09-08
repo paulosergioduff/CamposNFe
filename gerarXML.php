@@ -11,10 +11,13 @@ $app = 'Update';
 	tem mais a ver com didática e organização do código*/
 
 	$criarpagina->pagina = 'nfe-teste.xml';
-	$criarpagina->conteudo = 'Conteudo novo criado!';
+	$criarpagina->conteudo = "$cabecalho->xmlversion";
 	//$criarpagina->arquivoalvo = ';
 	$criarpagina->$app();
-	echo "<p>Resultado:<br>"; include "meuarquivo.txt";
-	//$criarpagina->imprimeXML();
+	echo "<p>Resultado:<br>
+	<textarea rows='4' cols='50'>";
+	include "nfe-teste.xml";
+	echo "</textarea>"
+	
 
 ?> 
